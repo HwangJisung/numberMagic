@@ -2,6 +2,7 @@ package com.hjs.ex_1118_numbermagic;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,7 +50,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.btn_restart :
-
+                    Intent i = new Intent(MainActivity.this, MainActivity.class);
+                    startActivity(i);
+                    finish();
                     break;
             }
         }
@@ -81,6 +84,12 @@ public class MainActivity extends AppCompatActivity {
                 if(n == YES) result += 2;
 
                 str = "당신이 생각한 숫자는\n" + result + "\n입니다!!";
+
+                // 다시하기 버튼을 활성화
+                btn_restart.setVisibility(View.VISIBLE);
+                btn_yes.setVisibility(View.INVISIBLE);
+                btn_no.setVisibility(View.INVISIBLE);
+
                 break;
         }
 
