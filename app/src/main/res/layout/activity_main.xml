@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1~30사이의 숫자를 생각하세요"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff9e9b"
+        android:id="@+id/show_num"
+        android:layout_weight="1"
+        android:text="04 05 06 07 12\n13 14 15 20 21\n22 23 28 29 30"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="#000"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YES"
+                android:textSize="30dp"
+                android:textColor="#fff"
+                android:background="#957745"
+                android:id="@+id/btn_yes"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="#fff"
+                android:textSize="30dp"
+                android:background="#7878aa"
+                android:id="@+id/btn_no"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ReStart!"
+            android:textSize="30dp"
+            android:id="@+id/btn_restart"
+            android:visibility="invisible"/>
+    </FrameLayout>
+
+</LinearLayout>
